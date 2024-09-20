@@ -1,6 +1,7 @@
 ﻿using CadAlunoMVC.DAO;
 using CadAlunoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 
@@ -25,6 +26,7 @@ namespace CadAlunoMVC.Controllers
         {
             try
             {
+                PreparaListaCidadesParaCombo();
                 ViewBag.Operacao = "I";
                 AlunoViewModel aluno = new AlunoViewModel();
                 aluno.DataNascimento = DateTime.Now;
@@ -45,13 +47,23 @@ namespace CadAlunoMVC.Controllers
         {
             try
             {
-                AlunoDAO dao = new AlunoDAO();
-                if (Operacao == "I")
-                    dao.Inserir(aluno);
-                else
-                    dao.Alterar(aluno);
+                ValidaDados(aluno, Operacao);
+                if (ModelState.IsValid)
+                {
+                    AlunoDAO dao = new AlunoDAO();
+                    if (Operacao == "I")
+                        dao.Inserir(aluno);
+                    else
+                        dao.Alterar(aluno);
 
-                return RedirectToAction("index");
+                    return RedirectToAction("index");
+                }
+                else
+                {
+                    PreparaListaCidadesParaCombo();
+                    ViewBag.Operacao = Operacao;
+                    return View("Form", aluno);
+                }
             }
             catch (Exception ex)
             {
@@ -102,6 +114,7 @@ namespace CadAlunoMVC.Controllers
         {
             try
             {
+                PreparaListaCidadesParaCombo();
                 ViewBag.Operacao = "A";
                 AlunoDAO dao = new AlunoDAO();
                 AlunoViewModel aluno = dao.Consulta(id);
@@ -116,6 +129,20 @@ namespace CadAlunoMVC.Controllers
             }
         }
 
+        private void PreparaListaCidadesParaCombo()
+        {
+            CidadeDAO cidadeDao = new CidadeDAO();
+            var cidades = cidadeDao.ListaCidades();
+            List<SelectListItem> listaCidades = new List<SelectListItem>();
+
+            listaCidades.Add(new SelectListItem("Selecione uma cidade...", "0"));
+            foreach (var cidade in cidades)
+            {
+                SelectListItem item = new SelectListItem(cidade.Nome, cidade.Id.ToString());
+                listaCidades.Add(item);
+            }
+            ViewBag.Cidades = listaCidades;
+        }
 
 
     }
