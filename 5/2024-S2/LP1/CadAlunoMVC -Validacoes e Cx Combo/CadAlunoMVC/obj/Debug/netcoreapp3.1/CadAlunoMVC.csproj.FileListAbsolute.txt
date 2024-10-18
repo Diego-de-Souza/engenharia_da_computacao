@@ -728,3 +728,5 @@ W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC -Validacoes e Cx Combo\CadA
 W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC -Validacoes e Cx Combo\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.dll
 W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC -Validacoes e Cx Combo\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.pdb
 W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC -Validacoes e Cx Combo\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.genruntimeconfig.cache
+X:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC -Validacoes e Cx Combo\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.dll
+X:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC -Validacoes e Cx Combo\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.pdb
