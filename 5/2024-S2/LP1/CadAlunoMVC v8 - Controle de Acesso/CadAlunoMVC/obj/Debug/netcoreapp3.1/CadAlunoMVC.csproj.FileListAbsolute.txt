@@ -2196,3 +2196,4 @@ W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC v8 - Controle de Acesso\Cad
 W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC v8 - Controle de Acesso\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.dll
 W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC v8 - Controle de Acesso\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.pdb
 W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC v8 - Controle de Acesso\CadAlunoMVC\obj\Debug\netcoreapp3.1\CadAlunoMVC.genruntimeconfig.cache
+W:\Professores\Prof. Eduardo\2024-S2\LP1\CadAlunoMVC v8 - Controle de Acesso\CadAlunoMVC\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs

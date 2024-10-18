@@ -10,7 +10,7 @@ namespace CadAlunoMVC.Controllers
     {
         public CidadeController() {
             DAO = new CidadeDAO();
-            GeraProximoId = true;
+            GeraProximoId = true;            
         }
 
         protected override void ValidaDados(CidadeViewModel model, string operacao)

@@ -21,9 +21,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        @if (ViewBag.Logado == true)
+                        {
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Aluno" asp-action="Index" class="nav-link text-dark">Alunos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Cidade" asp-action="Index" class="nav-link text-dark">Cidades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Login" asp-action="LogOff" class="nav-link text-dark">Logoff</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="Login" asp-action="Index" class="nav-link text-dark">Login</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
